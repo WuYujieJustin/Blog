@@ -1,0 +1,38 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="col-sm-2 card text-white pb-3 border-light rounded-0">
+        <img class="card-img" src="{% static 'Dashboard/live.jpg'%}" alt="Card image">
+        <div class="card-img-overlay">
+            <h5 class="card-title text-center pt-3">If pink is used in my blog,<br>then Jay Chou will probably come.</h5>
+            <p class="card-title text-center pt-3"><a class="btn">Play</a></p>
+        </div>
+    </div>
+
+<div class="col-sm-2 card text-white pb-3 border-light">
+    <img class="card-img" src="{% static 'Dashboard/waittinfforyou.jpg'%}" alt="Card image">
+</div>
+
+
+<div class="col-sm-2 card text-white pb-3 border-light">
+    <img class="card-img" src="{% static 'Dashboard/best.jpg'%}" alt="Card image">
+</div>
+<div class="col-sm-2 card text-white pb-3 border-light">
+    <img class="card-img" src="{% static 'Dashboard/huahai.jpg'%}" alt="Card image">
+</div>
+<div class="col-sm-2 card text-white pb-3 border-light">
+    <img class="card-img" src="{% static 'Dashboard/concert.jpg'%}" alt="Card image">
+</div>
+<div class="col-sm-2 card text-white pb-3 border-light">
+    <img class="card-img" src="{% static 'Dashboard/inv.jpg'%}" alt="Card image">
+</div>
+<div class="col-sm-12">
+    <footer class="text-center" >
+        <p>Designed & Developed by Justin with love, under MIT License</p>
+    </footer>
+</div>
+
+
+{% endblock %}

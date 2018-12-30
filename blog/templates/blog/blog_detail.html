@@ -1,0 +1,73 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+{% load static %}
+
+
+<nav class="col-md-1 offset-md-3 d-none d-md-block sidebar fixed-top" role="main">
+  <div class="sidebar">
+        <h5>Content list</h5>
+    <ul class="nav flex-column mb-2">
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#{{blog.heading1}}">
+                        {{blog.heading1}}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#{{blog.heading2}}">
+                      {{blog.heading2}}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#{{blog.heading3}}">
+                        {{blog.heading3}}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#{{blog.heading4}}">
+                {{blog.heading4}}
+             </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="col-md-8 ml-sm-auto col-lg-8 px-4">
+    <div class="col-md-7 blog-post" data-spy="scroll" data-target="#list-example" data-offset="0">
+  
+    <h1 class="blog-post-title">{{blog.title}}</h1>
+    <p class="blog-post-meta pt-2">{{blog.created}} by {{blog.userid}}</p>
+    <hr>
+    <!-- items used to design content-navbar -->
+    <h3 id="{{blog.heading1}}">{{blog.heading1}}</h3>
+    <p>{{blog.pra1}}</p>
+    <hr>
+    <h3 id="{{blog.heading2}}">{{blog.heading2}}</h3>
+    <p>{{blog.pra2}}</p>
+    <hr>
+    <h3 id="{{blog.heading3}}">{{blog.heading3}}</h3>
+    <p>{{blog.pra3}}</p>
+    <hr>
+    <h3 id="{{blog.heading4}}">{{blog.heading4}}</h3>
+    <p>{{blog.pra4}}</p>
+    <hr>
+    <a class="col-md-1 text-dark" href="{% url 'blogs' %}">返回</a>
+    <hr>
+      <!-- comments system supported by valine -->
+        <div id="vcomments" class="pt-5" ></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'mCcI7k6w8VjxVT1fXO9CTt1n-gzGzoHsz',
+                appKey: 'RBPtn6urdM8WiTNOCkNw9hE8',
+                })
+        </script>
+       </div>
+    </div>
+  </div><!-- /.blog-post -->
+</div>
+</div>
+</main>
+{% endblock %}

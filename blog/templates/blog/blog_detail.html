@@ -34,26 +34,26 @@
   </div>
 </nav>
 
-<main class="col-md-8 ml-sm-auto col-lg-8 px-4">
+<main class="col-md-8 ml-sm-auto col-lg-8 px-4" role="main">
     <div class="col-md-7 blog-post" data-spy="scroll" data-target="#list-example" data-offset="0">
   
-    <h1 class="blog-post-title">{{blog.title}}</h1>
+    <h3 class="blog-post-title">{{blog.title}}</h3>
     <p class="blog-post-meta pt-2">{{blog.created}} by {{blog.userid}}</p>
     <hr>
     <!-- items used to design content-navbar -->
-    <h3 id="{{blog.heading1}}">{{blog.heading1}}</h3>
+    <h5 id="{{blog.heading1}}">{{blog.heading1}}</h5>
     <p>{{blog.pra1}}</p>
     <hr>
-    <h3 id="{{blog.heading2}}">{{blog.heading2}}</h3>
+    <h5 id="{{blog.heading2}}">{{blog.heading2}}</h5>
     <p>{{blog.pra2}}</p>
     <hr>
-    <h3 id="{{blog.heading3}}">{{blog.heading3}}</h3>
+    <h5 id="{{blog.heading3}}">{{blog.heading3}}</h5>
     <p>{{blog.pra3}}</p>
     <hr>
-    <h3 id="{{blog.heading4}}">{{blog.heading4}}</h3>
+    <h5 id="{{blog.heading4}}">{{blog.heading4}}</h5>
     <p>{{blog.pra4}}</p>
     <hr>
-    <a class="col-md-1 text-dark" href="{% url 'blogs' %}">返回</a>
+    <a class="col-md-1 text-dark text-decoration-none" href="{% url 'blogs' %}">Back</a>
     <hr>
       <!-- comments system supported by valine -->
         <div id="vcomments" class="pt-5" ></div>
